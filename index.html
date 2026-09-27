@@ -46,6 +46,20 @@
         }
         h2 { color: #ff77ff; margin-bottom: 10px; }
         p { color: #d1c4e9; font-size: 14px; margin-bottom: 20px; }
+        .music-player {
+            width: min(100%, 300px);
+            margin: 22px auto;
+            overflow: hidden;
+            border: 1px solid rgba(255, 179, 255, 0.55);
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(255, 119, 255, 0.18);
+        }
+        .music-player iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 0;
+        }
         .members {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -161,7 +175,18 @@
 
 <div class="container">
     <h2>✨ A Maria faz 12 anos! ✨</h2>
-    <p>Vamos cantar os Parabéns em minha casa e depois seguimos para o JumpYard. Temos transporte!<br>JumpYard Matosinhos | 10 de outubro<br>Confirma a tua presença através deste formulário.</p>
+    <p>Vamos cantar os Parabéns em minha casa e depois seguimos para o JumpYard. Temos transporte!<br><br>JumpYard Matosinhos | 10 de outubro<br>Confirma a tua presença através deste formulário.</p>
+
+    <div class="music-player">
+        <iframe
+            src="https://www.youtube-nocookie.com/embed/8g7VclWsiaM?playsinline=1"
+            title="Vídeo oficial de PINKY UP, das KATSEYE"
+            loading="lazy"
+            allow="encrypted-media; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
 
     <div class="members" aria-label="Membros das KATSEYE">
         <figure class="member">
