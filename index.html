@@ -54,11 +54,9 @@
             border-radius: 10px;
             box-shadow: 0 6px 18px rgba(255, 119, 255, 0.18);
         }
-        .music-player iframe {
+        .music-player audio {
             display: block;
             width: 100%;
-            height: 152px;
-            border: 0;
         }
         .members {
             display: grid;
@@ -166,14 +164,10 @@
     <p>Vamos cantar os Parabéns em minha casa e depois seguimos para o JumpYard. Temos transporte!<br><br>JumpYard Matosinhos | 10 de outubro<br>Confirma a tua presença através deste formulário.</p>
 
     <div class="music-player">
-        <iframe
-            src="https://open.spotify.com/embed/album/5tLy0MEMDVqiHKso6B4jnz?theme=0"
-            title="PINKY UP, das KATSEYE, no Spotify"
-            loading="lazy"
-            allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
+        <audio controls preload="none" aria-label="Ouvir PINKY UP das KATSEYE">
+            <source src="./pinkyup.mp3" type="audio/mpeg">
+            O teu navegador não suporta áudio HTML5.
+        </audio>
     </div>
 
     <div class="members" aria-label="Fotografias">
