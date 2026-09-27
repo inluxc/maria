@@ -62,7 +62,7 @@
         }
         .members {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
             margin: 24px 0;
         }
@@ -75,8 +75,6 @@
         .member:nth-child(2) { --delay: 70ms; }
         .member:nth-child(3) { --delay: 140ms; }
         .member:nth-child(4) { --delay: 210ms; }
-        .member:nth-child(5) { --delay: 280ms; }
-        .member:nth-child(6) { --delay: 350ms; }
         .member img {
             display: block;
             width: 100%;
@@ -92,15 +90,6 @@
         }
         .member figcaption { padding-top: 6px; }
         .member strong { display: block; color: #fff; font-size: 13px; }
-        .photo-credits {
-            border-top: 1px solid rgba(255, 179, 255, 0.3);
-            margin-top: 24px;
-            padding-top: 12px;
-            color: #d1c4e9;
-            font-size: 10px;
-            line-height: 1.6;
-        }
-        .photo-credits a { color: #ffb3ff; }
         .form-group {
             margin-bottom: 15px;
             text-align: left;
@@ -159,7 +148,6 @@
             body { padding: 14px; }
             .container { padding: 22px 18px; }
             .members { gap: 9px; }
-            .photo-credits { font-size: 9px; }
         }
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -188,30 +176,18 @@
         </iframe>
     </div>
 
-    <div class="members" aria-label="Membros das KATSEYE">
+    <div class="members" aria-label="Fotografias">
         <figure class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Manon_240913.jpg" alt="Membro das KATSEYE: Manon" loading="lazy">
-            <figcaption><strong>Manon</strong></figcaption>
+            <img src="./invite-photo-1.jpeg" alt="Fotografia 1" loading="lazy">
         </figure>
         <figure class="member">
-            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Katseye_Sophia_in_Seattle_%28cropped%29.jpg/500px-Katseye_Sophia_in_Seattle_%28cropped%29.jpg" alt="Membro das KATSEYE: Sophia" loading="lazy">
-            <figcaption><strong>Sophia</strong></figcaption>
+            <img src="./invite-photo-2.jpeg" alt="Fotografia 2" loading="lazy">
         </figure>
         <figure class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Daniela_240913.jpg" alt="Membro das KATSEYE: Daniela" loading="lazy">
-            <figcaption><strong>Daniela</strong></figcaption>
+            <img src="./invite-photo-3.jpeg" alt="Fotografia 3" loading="lazy">
         </figure>
         <figure class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Lara_Raj_240913_1.jpg" alt="Membro das KATSEYE: Lara" loading="lazy">
-            <figcaption><strong>Lara</strong></figcaption>
-        </figure>
-        <figure class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Megan_240913.jpg" alt="Membro das KATSEYE: Megan" loading="lazy">
-            <figcaption><strong>Megan</strong></figcaption>
-        </figure>
-        <figure class="member">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Yoonchae_240913.jpg" alt="Membro das KATSEYE: Yoonchae" loading="lazy">
-            <figcaption><strong>Yoonchae</strong></figcaption>
+            <img src="./invite-photo-4.jpeg" alt="Fotografia 4" loading="lazy">
         </figure>
     </div>
 
@@ -233,18 +209,6 @@
         <button type="submit">Enviar resposta</button>
     </form>
 
-    <footer class="photo-credits">
-        Créditos: fotografias de
-        <a href="https://commons.wikimedia.org/wiki/File:Manon_240913.jpg" target="_blank" rel="noreferrer">Manon</a>,
-        <a href="https://commons.wikimedia.org/wiki/File:Daniela_240913.jpg" target="_blank" rel="noreferrer">Daniela</a>,
-        <a href="https://commons.wikimedia.org/wiki/File:Lara_Raj_240913_1.jpg" target="_blank" rel="noreferrer">Lara</a> e
-        <a href="https://commons.wikimedia.org/wiki/File:Megan_240913.jpg" target="_blank" rel="noreferrer">Megan</a>, por TV10, licenciadas ao abrigo da
-        <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noreferrer">CC BY 3.0</a>;
-        fotografia de <a href="https://commons.wikimedia.org/wiki/File:Katseye_Sophia_in_Seattle_(cropped).jpg" target="_blank" rel="noreferrer">Sophia</a> por David Lee, licenciada ao abrigo da
-        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>;
-        fotografia de <a href="https://commons.wikimedia.org/wiki/File:Yoonchae_240913.jpg" target="_blank" rel="noreferrer">Yoonchae</a> por K-POPIT, licenciada ao abrigo da
-        <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noreferrer">CC BY 3.0</a>.
-    </footer>
 </div>
 
 </body>
