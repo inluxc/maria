@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12.º Aniversário da Maria - Confirmação de presença</title>
     <style>
+        :root {
+            --base-red: #b51639;
+            --base-red-dark: #6e0b22;
+            --base-red-soft: #f1c2cd;
+            --panel-dark: #170910;
+            --panel-dark-2: #2b0f1a;
+            --text-soft: #f3dfe7;
+            --shadow-red: rgba(181, 22, 57, 0.34);
+        }
+
         body {
-            background: radial-gradient(ellipse at top, #312044 0%, #120f1a 58%);
+            background: radial-gradient(ellipse at top, #2d0d16 0%, #10080c 58%);
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             text-align: center;
             padding: 20px;
             min-height: 100vh;
@@ -23,9 +33,9 @@
             z-index: 0;
             pointer-events: none;
             background-image:
-                radial-gradient(circle at 18px 24px, rgba(255, 231, 170, 0.85) 0 1px, transparent 1.8px),
-                radial-gradient(circle at 82px 115px, rgba(174, 242, 255, 0.7) 0 1px, transparent 1.8px),
-                radial-gradient(circle at 154px 62px, rgba(255, 179, 255, 0.65) 0 1px, transparent 1.8px),
+                radial-gradient(circle at 18px 24px, rgba(255, 201, 117, 0.8) 0 1px, transparent 1.8px),
+                radial-gradient(circle at 82px 115px, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.8px),
+                radial-gradient(circle at 154px 62px, rgba(150, 38, 66, 0.8) 0 1px, transparent 1.8px),
                 radial-gradient(circle at 208px 176px, rgba(255, 255, 255, 0.7) 0 1px, transparent 1.8px);
             background-size: 240px 220px, 310px 280px, 370px 330px, 280px 240px;
             opacity: 0.7;
@@ -34,25 +44,32 @@
         .container {
             max-width: 450px;
             margin: 0 auto;
-            background: linear-gradient(135deg, #2b1b3d, #1a1528);
+            background: linear-gradient(135deg, var(--panel-dark-2), var(--panel-dark));
             padding: 30px;
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
-            border: 2px solid #ff77ff;
+            box-shadow: 0 8px 25px var(--shadow-red);
+            border: 2px solid var(--base-red);
             box-sizing: border-box;
             position: relative;
             z-index: 1;
             animation: card-arrive 700ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
         }
-        h2 { color: #ff77ff; margin-bottom: 10px; }
-        p { color: #d1c4e9; font-size: 14px; margin-bottom: 20px; }
+        h2 {
+            color: var(--base-red);
+            margin-bottom: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 0.06em;
+            font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+            line-height: 1.2;
+        }
+        p { color: var(--text-soft); font-size: 15px; margin-bottom: 20px; line-height: 1.6; }
         .music-player {
             width: min(100%, 300px);
             margin: 22px auto;
             overflow: hidden;
-            border: 1px solid rgba(255, 179, 255, 0.55);
+            border: 1px solid rgba(195, 72, 98, 0.72);
             border-radius: 10px;
-            box-shadow: 0 6px 18px rgba(255, 119, 255, 0.18);
+            box-shadow: 0 6px 18px rgba(181, 22, 57, 0.18);
         }
         .music-player audio {
             display: block;
@@ -79,12 +96,12 @@
             aspect-ratio: 4 / 5;
             object-fit: cover;
             border-radius: 10px;
-            border: 1px solid rgba(255, 179, 255, 0.65);
+            border: 1px solid rgba(195, 72, 98, 0.75);
             transition: transform 220ms ease, box-shadow 220ms ease;
         }
         .member img:hover {
             transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 8px 18px rgba(255, 119, 255, 0.3);
+            box-shadow: 0 8px 18px rgba(181, 22, 57, 0.28);
         }
         .member figcaption { padding-top: 6px; }
         .member strong { display: block; color: #fff; font-size: 13px; }
@@ -95,21 +112,22 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #ffb3ff;
+            color: var(--base-red-soft);
             font-size: 13px;
         }
         input, select {
             width: 100%;
             padding: 10px;
             border-radius: 8px;
-            border: 1px solid #4a3b6c;
-            background: #120f1a;
+            border: 1px solid #4d1220;
+            background: #120d0d;
             color: #fff;
             box-sizing: border-box;
-            font: inherit;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 15px;
         }
         input:focus, select:focus {
-            outline: 2px solid #ff77ff;
+            outline: 2px solid var(--base-red);
             outline-offset: 2px;
         }
         button {
@@ -118,14 +136,15 @@
             padding: 12px 20px;
             border: 0;
             border-radius: 8px;
-            background: linear-gradient(135deg, #ff77ff, #b577ff);
+            background: linear-gradient(135deg, #c51843, #8b102d);
             color: #fff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 16px;
             font-weight: bold;
             cursor: pointer;
             transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
         }
-        button:hover { opacity: 0.95; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(255, 119, 255, 0.3); }
+        button:hover { opacity: 0.95; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(181, 22, 57, 0.32); }
         @keyframes card-arrive {
             from { opacity: 0; transform: translateY(18px); }
             to { opacity: 1; transform: translateY(0); }
@@ -160,15 +179,8 @@
 <body>
 
 <div class="container">
-    <h2>✨ A Maria faz 12 anos! ✨</h2>
+    <h2>A Maria faz 12 anos!</h2>
     <p>Vamos cantar os Parabéns em minha casa e depois seguimos para o JumpYard. Temos transporte!<br><br>JumpYard Matosinhos | 10 de outubro<br>Confirma a tua presença através deste formulário.</p>
-
-    <div class="music-player">
-        <audio controls preload="none" aria-label="Ouvir PINKY UP das KATSEYE">
-            <source src="./pinkyup.mp3" type="audio/mpeg">
-            O teu navegador não suporta áudio HTML5.
-        </audio>
-    </div>
 
     <div class="members" aria-label="Fotografias">
         <figure class="member">
