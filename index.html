@@ -84,25 +84,29 @@
         .member {
             margin: 0;
             min-width: 0;
+            transform: rotate(var(--tilt, 0deg));
             animation: member-arrive 600ms ease both;
             animation-delay: var(--delay, 0ms);
         }
-        .member:nth-child(2) { --delay: 70ms; }
-        .member:nth-child(3) { --delay: 140ms; }
-        .member:nth-child(4) { --delay: 210ms; }
+        .member:nth-child(1) { --tilt: -2deg; }
+        .member:nth-child(2) { --delay: 70ms; --tilt: 2.5deg; }
+        .member:nth-child(3) { --delay: 140ms; --tilt: -1.8deg; }
+        .member:nth-child(4) { --delay: 210ms; --tilt: 2.2deg; }
         .member img {
             display: block;
             width: 100%;
             aspect-ratio: 4 / 5;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 18% 12% 18% 14% / 14% 16% 18% 16%;
             border: 1px solid rgba(195, 72, 98, 0.75);
-            filter: sepia(0.25) saturate(1.05) hue-rotate(-8deg) brightness(1.02);
-            transition: transform 220ms ease, box-shadow 220ms ease;
+            filter: sepia(0.25) saturate(1.08) contrast(1.06) hue-rotate(-8deg) brightness(1.03);
+            transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+            box-shadow: 0 8px 20px rgba(181, 22, 57, 0.18);
         }
         .member img:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 8px 18px rgba(181, 22, 57, 0.28);
+            transform: translateY(-4px) scale(1.03) rotate(0deg);
+            box-shadow: 0 10px 24px rgba(181, 22, 57, 0.28);
+            filter: sepia(0.2) saturate(1.12) contrast(1.08) hue-rotate(-8deg) brightness(1.06);
         }
         .member figcaption { padding-top: 6px; }
         .member strong { display: block; color: #fff; font-size: 13px; }
@@ -146,6 +150,12 @@
             transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
         }
         button:hover { opacity: 0.95; transform: translateY(-2px); box-shadow: 0 6px 18px rgba(181, 22, 57, 0.32); }
+        .image-links {
+            margin-top: 18px;
+            font-size: 13px;
+        }
+        .image-links a { color: var(--base-red-soft); margin: 0 5px; }
+        .image-links a:hover { color: #fff; }
         @keyframes card-arrive {
             from { opacity: 0; transform: translateY(18px); }
             to { opacity: 1; transform: translateY(0); }
@@ -185,16 +195,16 @@
 
     <div class="members" aria-label="Fotografias">
         <figure class="member">
-            <img src="./invite-photo-1.jpeg" alt="Fotografia 1" loading="lazy">
+            <img src="https://inluxc.github.io/maria/invite-photo-1.jpeg" alt="Fotografia 1" loading="lazy">
         </figure>
         <figure class="member">
-            <img src="./invite-photo-2.jpeg" alt="Fotografia 2" loading="lazy">
+            <img src="https://inluxc.github.io/maria/invite-photo-2.jpeg" alt="Fotografia 2" loading="lazy">
         </figure>
         <figure class="member">
-            <img src="./invite-photo-3.jpeg" alt="Fotografia 3" loading="lazy">
+            <img src="https://inluxc.github.io/maria/invite-photo-3.jpeg" alt="Fotografia 3" loading="lazy">
         </figure>
         <figure class="member">
-            <img src="./invite-photo-5.jpeg" alt="Fotografia 4" loading="lazy">
+            <img src="https://inluxc.github.io/maria/invite-photo-5.jpeg" alt="Fotografia 4" loading="lazy">
         </figure>
     </div>
 
@@ -215,7 +225,6 @@
 
         <button type="submit">Enviar resposta</button>
     </form>
-
 </div>
 
 </body>
